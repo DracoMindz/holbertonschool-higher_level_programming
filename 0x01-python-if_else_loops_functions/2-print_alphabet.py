@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-for i in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-          'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']:
-    print('{}'.format(i), end=" ")
+for i in range(96, 123):
+    print('{}'.format(chr(i)), end=" ")
 print('\n')
