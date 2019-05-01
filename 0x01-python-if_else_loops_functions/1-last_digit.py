@@ -12,7 +12,7 @@ else:
     lastnumber = 0
 
 if (lastnumber) == 0:
-    print('is {} and is zero'.format(lastnumber))
+    print('is {} and is 0'.format(lastnumber))
 
 if (lastnumber) > 5:
     print('is {} and is greater than 5'.format(lastnumber))
