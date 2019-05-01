@@ -2,4 +2,3 @@
 
 for i in range(96, 123):
     print('{}'.format(chr(i)), end=" ")
-print('\n')
