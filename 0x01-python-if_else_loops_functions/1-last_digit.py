@@ -14,8 +14,8 @@ else:
 if (lastnumber) == 0:
     print('is {} and is zero'.format(lastnumber))
 
-elif (lastnumber) > 5:
+if (lastnumber) > 5:
     print('is {} and is greater than 5'.format(lastnumber))
 
-elif (lastnumber) < 6 and (number % 10) != 0:
+if (lastnumber) < 6 and (number % 10) != 0:
     print('is {} and is less than 6 and not 0'.format(lastnumber))
