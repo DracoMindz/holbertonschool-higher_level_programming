@@ -9,4 +9,5 @@ if __name__ == "__main__":
     else:
         print(len(argv) - 1, 'arguments:')
     for n, x in enumerate(argv[1:]):
+        print(len(argv) - 1, 'arguments:')
         print("{}: {}".format(n, x))
