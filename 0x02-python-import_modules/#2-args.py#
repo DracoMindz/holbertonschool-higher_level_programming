@@ -6,7 +6,7 @@ if __name__ == "__main__":
             print(len(argv), 'arguments.')
             exit()
         if len(argv) == 1:
-            print(len(argv), 'argument.')
+            print(len(argv) - 1, 'argument.')
         else:
-            print(len(argv), 'arguments:')
+            print(len(argv) - 1, 'arguments:')
         print("{}: {}".format(n, x))
