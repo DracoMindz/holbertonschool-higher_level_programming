@@ -7,7 +7,7 @@ if __name__ == "__main__":
         print(ac, 'arguments.')
         exit()
     if ac == 1:
-        print(ac, 'argument.')
+        print(ac, 'argument:')
     else:
         print(ac, 'arguments:')
     for n, x in enumerate(argv[1:], 1):
