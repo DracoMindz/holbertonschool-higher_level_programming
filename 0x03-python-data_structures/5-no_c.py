@@ -2,4 +2,6 @@
 def no_c(my_string):
 
     translation = {99: None, 67: None}
-    print('{:s}', my_string.translate(translation))
+    new_string = my_string.translate(translation)
+
+    return(new_string)
