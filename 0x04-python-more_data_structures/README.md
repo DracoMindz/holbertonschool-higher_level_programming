@@ -1,0 +1,1 @@
+The projectsnin this directory focus on working with Data Structures: Set, Dictionary in Python.
