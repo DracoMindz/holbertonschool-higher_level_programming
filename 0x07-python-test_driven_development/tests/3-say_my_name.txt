@@ -2,10 +2,9 @@
 Doctest Module: Testing the say_my_name function from 3-say_my_name.py
 Each '>>>' will run as if in python command line.
 After each '>>>' is a test; next line will be the expected output.
-If the output does not match exactly (including trail spaces), it is a test fail.
+If output does not match exactly (including trail spaces), it is a test fail.
 python3 -c 'print(__import__("say_my_name").__doc__)'
 """
-
 >>> from 3-say_my_name.py import say_my_name
 >>> say_my_name(2, Joan)
 first_name must be a string
