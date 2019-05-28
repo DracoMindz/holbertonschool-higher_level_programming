@@ -1,3 +1,22 @@
 """
-This  doctest for add_integer function
+Doctest Module: Testing the add_integer function from 0-add_integer.py
+Each '>>>' will run as if in python command line.
+After each '>>>' is a test; next line will be the expected output.
+If the output does not match exactly (including trail spaces), it is a test fail.
+python3 -c 'print(__import__("add_integer").__doc__)'
 """
+
+>>> from 0-add_integer.py import add_integer
+>>> add_integer(10, 5)
+50
+>>> add_integer(m, 6)
+a must be an integer
+>>> add_integer(7, w)
+b must be an integer
+>>> add_integer(funtime, x)
+a must be an integer
+b must be an integer
+>>> add_integer(7, )
+b must be an integer
+>>> add_integer( ,6)
+a must be an integer 
