@@ -1,0 +1,31 @@
+"""
+Doctest Module: Testing the print_square function from 4-print_square.py
+Each '>>>' will run as if in python command line.
+After each '>>>' is a test; next line will be the expected output.
+If output does not match exactly (including trail spaces), it is a test fail.
+python3 -c 'print(__import__("print_square").__doc__)'
+"""
+python3 -c 'print(__import__("print_square").__doc__)')
+>>> from 4-print_square.py import print_square
+>>> print_square(3)
+###
+###
+###
+
+>>>print_square(-3)
+size must be >= 0
+
+>>>print_square(0)
+
+
+>>>print_square(N)
+size must be an integer
+
+>>>print_square(w-4)
+size must be an integer
+
+>>>print_squaare(@)
+size must be an integer
+
+>>>printa_square( )
+size must be an integer
