@@ -8,7 +8,7 @@ python3 -c 'print(__import__("add_integer").__doc__)'
 
 >>> from 0-add_integer.py import add_integer
 >>> add_integer(10, 5)
-50
+15
 >>> add_integer(m, 6)
 a must be an integer
 >>> add_integer(7, w)
