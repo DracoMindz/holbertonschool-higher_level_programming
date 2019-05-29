@@ -47,4 +47,6 @@ class Rectangle:
             for j in range(self.height):
                 return ""
             for i in range(self.width):
+                self.string = (" " *self.height)
+                self.strang = ("#" * self.width)
                 return(" " * self.height + "#" * self.width)
