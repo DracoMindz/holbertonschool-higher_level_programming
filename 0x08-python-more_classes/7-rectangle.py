@@ -3,7 +3,7 @@ class Rectangle:
     """A 4 sided shape with 2 equal sides for length
     ...2 equal sides for width. All angles are 90 degrees
     """
-    def __init__(self, width=0, height=0):
+ def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
@@ -41,10 +41,13 @@ class Rectangle:
         self.__height = value
 
     def __str__(self):
-        if (self.width == 0 or self.height == 0):
+        new_string = []
+        if (self.__width is 0 or self.__height is 0):
             return ""
         else:
-            for j in range(self.height):
-                return ""
-            for i in range(self.width):
-                return("" * self.height + "#" * self.width)
+            for j in range(self.__height):
+                new_string.append("#" * self.__width)
+            return '\n'.join(new_string)
+
+    def __repr__(self):
+        return 'Rectangle(%s, %s)' % (self.width, self.height)

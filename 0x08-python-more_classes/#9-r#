@@ -3,7 +3,7 @@ class Rectangle:
     """A 4 sided shape with 2 equal sides for length
     ...2 equal sides for width. All angles are 90 degrees
     """
- def __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
