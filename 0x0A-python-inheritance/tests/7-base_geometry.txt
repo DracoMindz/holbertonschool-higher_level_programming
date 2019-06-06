@@ -1,0 +1,15 @@
+"""
+Doctest Module: Testing the print_sorted function from 1-my_list.py
+Each '>>>' will run as if in python command line.
+After each '>>>' is a test; next line will be the expected output.
+If output does not match exactly (including trail spaces), it is a test fail.
+python3 -c 'print(__import__("print_square").__doc__)'
+"""
+>>>bg.integer_validator("my_int", rt)
+Traceback (most recent call last):
+NameError: name 'rt' is not defined
+
+>>>bg.integer_validator("width", -1)
+Traceback (most recent call last):
+ValueError: <name> must be greater than 0
+
