@@ -1,27 +1,20 @@
 #!/usr/bin/python3
 import json
 import sys
+import os.path
 
 
-def save_to_json_file(my_obj, filename):
-    with open(filename, 'w') as filename:
-        json.dump(my_obj, filename)
+save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
 
-def load_from_json_file(filename):
-    """
-    function to load json object
-    """
-    with open(filename) as f:
-        return json.load(f)
 
+myList = []
 
-def add_item(args):
-    """
-    function to add all arguemts to a Python List and save to json file
-    """
+if os.path.exists("add_item.json"):
+    myList = load_from_json_file('add_item.json')
 
-    myList = []
-    myListList = mylist.extend(args)
-    save_to_json_file(myListList, add_item.js)
-    load_from_json_file(add_item.js)
+for b in sys.argv[1:]:
+    myList.append(b)
+
+save_to_json_file(myList, "add_item.json")
