@@ -13,7 +13,7 @@ mylist = []
 if os.path.exists("add_item.json"):
     myList = loadFile('add_item.json')
 
-for b in sys.argv[1:]:
+for b in sys.argv[:]:
     myList.append(b)
 
 saveFile(myList, "add_item.json")
