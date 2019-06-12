@@ -19,7 +19,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    rectanglesCalled +=1
+    rectanglesCalled += 1
 
     @property   # method to get value/properties of private width
     def width(self):
@@ -31,7 +31,7 @@ class Rectangle(Base):
         """
         Taske: TypeError for non integer, ValueError for negative numbers
         """
-        if not type(value):
+        if type(value) is not int:
             raise TypeError('width must be an integer')
         if (value < 0):
             raise ValueError('width must be > 0')
@@ -47,7 +47,7 @@ class Rectangle(Base):
         """
         Task 3 TypError for non integer, ValueError for negative numbers
         """
-        if not type(value):
+        if type(value) is not int:
             raise TypeError('height must be an integer')
         if (value < 0):
             raise ValueError('height must be > 0')
@@ -63,12 +63,11 @@ class Rectangle(Base):
         """
         Task 3 TypeError for non integer, ValueError for negative numbers
         """
-        if type(value):
-            self.__x = value
-        else:
+        if type(value) is not int:
             raise TypeError('x must be an integer')
         if (value < 0):
             raise ValueError('x must be >= 0')
+            self.__x = value
 
     @property   # methos to get value/properties of private y
     def y(self):
@@ -80,7 +79,7 @@ class Rectangle(Base):
         """
         Task 3 TypeError for non integer. ValueError for negative numbers
         """
-        if not type(value):
+        if type(value) is not int:
             raise TypeError('y must be an integer')
         if (value < 0):
             raise ValueError('y must be >= 0')
@@ -92,6 +91,18 @@ class Rectangle(Base):
     def area(self):
         return self.width * self.height
 
+        """
+        Task 5 display the rectangle with "#"
+        """
     def display(self):
         for x in range(self.height):
             print("#" * self.width)
+
+        """
+        Task 6: return a string format. call the variables.
+        """
+
+    def __str__(self, __init__, id=None):
+
+        return "/[Rectangle/] ({}) {}/{} - {}/{}"\
+                .format(self.id, self.x, self.y, self.width, self.height)
