@@ -7,6 +7,8 @@ Class rectangle that inherits from Base.
 
 class Rectangle(Base):
 
+    rectanglesCalled = 0
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Private instance attributes, with their own public getter/setter.
@@ -16,6 +18,8 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    rectanglesCalled +=1
 
     @property   # method to get value/properties of private width
     def width(self):
@@ -81,3 +85,13 @@ class Rectangle(Base):
         if (value < 0):
             raise ValueError('y must be >= 0')
         self.__y = value
+
+        """
+        Task 4 public method area that reurns the area of the Rectangle
+        """
+    def area(self):
+        return self.width * self.height
+
+    def display(self):
+        for x in range(self.height):
+            print("#" * self.width)
