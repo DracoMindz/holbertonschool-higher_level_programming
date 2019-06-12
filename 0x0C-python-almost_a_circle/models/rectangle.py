@@ -17,50 +17,71 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    @property
+    @property #method to get value/properties of private width
     def width(self):
         return self.__width
 
-    @width.setter
+    @width.setter #setting value of width
     def width(self, value):
-        if is not type(value, int):
+
+        """
+        Taske: TypeError for non integer, ValueError for negative numbers
+        """
+        if isinstance(value, int):
+            self.__width = value
+        else:
             raise TypeError('width must be an integer')
         if (value < 0):
             raise ValueError('width must be > 0')
-        self.__width = value
 
-    @property
+    @property #method to get value/properties of private height
     def height(self):
         return self.__height
 
-    @height.setter
+    @height.setter #setting value of height
     def height(self, value):
 
-        if is not type(value, int):
+        """
+        Task 3 TypError for non integer, ValueError for negative numbers
+        """
+        if isinstance(value, int):
+            self.__height = value
+        else:
             raise TypeError('height must be an integer')
         if (value < 0):
             raise ValueError('height must be > 0')
-        self.__height = value
 
-    @property
+    @property #method to get valyes/properties of private x
     def x(self):
         return self.__x
 
-    @x.setter
+    @x.setter #setting value of x
     def x(self, value):
-        if type(value) not int:
+
+        """
+        Task 3 TypeError for non integer, ValueError for negative numbers
+        """
+        if isinstance(value, int):
+            self.__x = value
+        else:
             raise TypeError('x must be an integer')
         if (value < 0):
             raise ValueError('x must be >= 0')
-        self.__x = value
-    @property
+
+    @property #methos to get value/properties of private y
     def y(self):
         return self.__y
 
-    @y.setter
+    @y.setter #setting value of y
     def y(self, value):
-        if is not type(int):
+
+        """
+        Task 3 TypeError for non integer. ValueError for negative numbers
+        """
+        if isinstance(value, int):
+            self.__y = value
+        else:
             raise TypeError('y must be an integer')
         if (value < 0):
             raise ValueError('y must be >= 0')
-        self.__y = value
+        print(self.__y)
