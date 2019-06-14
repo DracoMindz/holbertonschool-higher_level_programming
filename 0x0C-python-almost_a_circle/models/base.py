@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import turtle
+
 class Base:
     """
     This class will be the base of all other classes
@@ -29,4 +31,12 @@ class Base:
 
             @staticmethod
             def draw(list_rectangles, list_squares):
-                """draw a square"""
+                """draw a rectangle in python using turtle"""
+                turtle.color(colostring)  # add color to the rectangle
+                for m in range(2):  # draw the rectagle
+                    turtle.forward(self.width)
+                    turtle.left(90)
+                    turtle.forward(self.height)
+                    turtle.left(90)
+                    
+                turtle.exitonclick()  # drawing exits when you click
