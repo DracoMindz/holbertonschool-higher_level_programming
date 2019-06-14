@@ -29,7 +29,7 @@ class Rectangle(Base):
     def width(self, value):
 
         """
-        Taske: TypeError for non integer, ValueError for negative numbers
+        Task 3: TypeError for non integer, ValueError for negative numbers
         """
         if type(value) is not int:
             raise TypeError('width must be an integer')
@@ -106,3 +106,11 @@ class Rectangle(Base):
 
         return "/[Rectangle/] ({}) {}/{} - {}/{}"\
                 .format(self.id, self.x, self.y, self.width, self.height)
+
+        """
+        Task 7: Print in stdout instance the Rectagle # character
+        """
+    def display(self):
+        print(self.y * '\n', end='')  # move down 
+        for x in range(self.height):
+            print(self.x * " " + self.width * "#")  #  print "#" start at x
