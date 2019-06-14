@@ -11,3 +11,22 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+
+            def load_from_file(cls):
+                """load from json"""
+                pass
+
+            @classmethod
+            def save_to_file_csv(cls, list_objs):
+                """serialize file """
+                pass
+
+            @classmethod
+            def load_from_file_csv(cls):
+                """deserialize file"""
+                pass
+
+            @staticmethod
+            def draw(list_rectangles, list_squares):
+                """draw a square"""
