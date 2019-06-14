@@ -33,6 +33,11 @@ class Base:
             def draw(list_rectangles, list_squares):
                 """draw a rectangle in python using turtle"""
                 turtle.color(colostring)  # add color to the rectangle
+                screen.setup(width = .75, height = .5, startx = None, starty = None)  # screen size, starting point
+                startx = self.x
+                starty = self.y
+                if not isinstance(self.height):
+                    self.width = self.height
                 for m in range(2):  # draw the rectagle
                     turtle.forward(self.width)
                     turtle.left(90)
