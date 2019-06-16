@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from models.base import Base
+#  import _tkinterxs
 """
 Class rectangle that inherits from Base.
 """
@@ -114,3 +115,13 @@ class Rectangle(Base):
         print(self.y * '\n', end='')  # move down 
         for x in range(self.height):
             print(self.x * " " + self.width * "#")  #  print "#" start at x
+        
+        """
+        Task 8: Assign arguments to each attribute
+        """
+    def update(self, *args):
+        key = [id, width, height, x, y]
+        for k, v in (key, args):
+            if v:
+                setattr(self, k. v)
+
