@@ -112,16 +112,14 @@ class Rectangle(Base):
         Task 7: Print in stdout instance the Rectagle # character
         """
     def display(self):
-        print(self.y * '\n', end='')  # move down 
+        print(self.y * '\n', end='')# move down 
         for x in range(self.height):
-            print(self.x * " " + self.width * "#")  #  print "#" start at x
-        
+            print(self.x * " " + self.width * "#")  ##  print "#" start at x
         """
         Task 8: Assign arguments to each attribute
         """
-    def update(self, *args):
-        key = [id, width, height, x, y]
-        for k, v in (key, args):
+    def update(self, *args, **kwargs):
+        for k, v in (kwargs, args):
             if v:
                 setattr(self, k. v)
 
