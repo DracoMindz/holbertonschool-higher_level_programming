@@ -26,7 +26,7 @@ class Rectangle(Base):
     def width(self):
         return self.__width
 
-    @width.setter  # setting value of width
+    @width.setter  # setting value of width    
     def width(self, value):
 
         """
@@ -54,13 +54,12 @@ class Rectangle(Base):
             raise ValueError('height must be > 0')
         self.__height = value
 
-    @property   # method to get valyes/properties of private x
+    @property   # method to get values/properties of private x
     def x(self):
         return self.__x
 
     @x.setter   # setting value of x
     def x(self, value):
-
         """
         Task 3 TypeError for non integer, ValueError for negative numbers
         """
@@ -105,7 +104,7 @@ class Rectangle(Base):
 
     def __str__(self, __init__, id=None):
 
-        return "/[Rectangle/] ({}) {}/{} - {}/{}"\
+        return "[Rectangle] ({}) {}/{} - {}/{}"\
                 .format(self.id, self.x, self.y, self.width, self.height)
 
         """
@@ -119,7 +118,8 @@ class Rectangle(Base):
         Task 8: Assign arguments to each attribute
         """
     def update(self, *args, **kwargs):
-        for k, v in (kwargs, args):
+        k = [id, w, h, x, y)
+        for k, v in (key, args):
             if v:
                 setattr(self, k. v)
 
