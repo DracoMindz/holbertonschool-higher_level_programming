@@ -33,8 +33,20 @@ class TestSquares(unittest, testcase):
         self.assertEqual(sq1.x, 6)
         self.assertEqual(sq1.y, 7)
 
-        self.assertRaises(ValueError, rect1.update, 9,-3, 2, 4, 6)
-        with self.assertRaises(ValueError, msg = "width must be > 0")
+        self.assertRaises(ValueError, sq1.update, -9, 3, 2, 1)
+        with self.assertRaises(ValueError, msg = "size must be > 0")
+        self.assertRaises(ValueError, sq1.update, 5, -3, 2, 2)
+        with self.assertRaises(ValueError, msg = "x must be > 0")
+        self.assertRaises(ValueError, sq1.update, 5, 3, -2, 3)
+        with self.assertRaises(ValueError, msg = "y must be > 0")
+
+        self.assertRaises(TypeError, sq1.update, a, 5, 4, 4)
+        with self.assertRaises(TypeError, msg = "size must be an integer")
+        self.assertRaises(TypeError, sq1.update, 5, b, 4, 5)
+        with self.assertRaises(TypeError, msg = "x  must be an integer")
+        self.assertRaises(TypeError, sq1.update, 5, 3, w, 6)
+        with self.assertRaises(TypeError, msg = "y  must be an integer")
+
     def test__str__(self):
         pass
     def test_update(self, *args, **kwargs):
