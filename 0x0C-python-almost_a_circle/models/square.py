@@ -20,8 +20,8 @@ class Square(Rectangle):
 	self.y = y
 	self.size = size
 
-    #  call the method __str__
-    obj.__str__(self, __init__, id=None):
+	#  call the method __str__
+	obj.__str__(self, __init__, id=None):
         return "[{}] ({}) {}/{} - {}".format("Square", self.id, self.x, self.y, self.width)
 
     """
@@ -54,13 +54,12 @@ class Square(Rectangle):
      """
 
      def to_dictionary(self):
-         dictRectangle = {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,'width':self.width}
-	 return dictRectangle
+         dictSquare = { 'id': self.id, 'x': self.x, 'size':self.size, 'y': self.y}
+	 return dictSquare
 
      def to_dictionary(self):
          pass
 
-     def to_json_string(list_dictionaries):
-         pass
+     
 
 

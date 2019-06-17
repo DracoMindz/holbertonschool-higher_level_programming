@@ -123,3 +123,7 @@ class Rectangle(Base):
             if v:
                 setattr(self, k. v)
 
+    def to_dictionary(self):
+        dictRectangle = {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.hei\
+ght,'width':self.width}
+         return dictRectangle
