@@ -45,3 +45,14 @@ class Base:
                     turtle.left(90)
                     
                 turtle.exitonclick()  # drawing exits when you click
+            #  Task 16
+            def save_to_file(cls, list_objs):
+                pass
+            #  Task 17
+            def from_json_string(json_string):
+                pass
+            #  Task 18
+            def create(cls, **dictionary):
+                pass
+            
+

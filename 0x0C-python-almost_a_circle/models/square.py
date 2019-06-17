@@ -8,7 +8,6 @@ Class Square: inherits from rectangle. Height and width equal size
 
 class Square(Rectangle):
 
-
     def __init__(self, size, x=0 , y=0, id=None):
     """
     Instance attributes, with getter and setter. Task 10        
@@ -30,7 +29,7 @@ class Square(Rectangle):
     """
     @property   # method to get value of private size                    
     def size(self):
-        return self.__size
+        return self.width
 
     @size.setter  # setting value of size                                          
     def size(self, value):
@@ -38,7 +37,8 @@ class Square(Rectangle):
             raise TypeError('size must be an integer')
         if (value < 0):
             raise ValueError('size must be > 0')
-        self.__size = value
+        self.width = value
+	self.height = value
 	
      """
      Task 12: create a public method assigning attributes
@@ -48,5 +48,19 @@ class Square(Rectangle):
 	 for k, v in (kwargs, args):
             if v:
                 setattr(self, k. v)
+		
+     """
+     Task 13: return a dictionary
+     """
+
+     def to_dictionary(self):
+         dictRectangle = {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,'width':self.width}
+	 return dictRectangle
+
+     def to_dictionary(self):
+         pass
+
+     def to_json_string(list_dictionaries):
+         pass
 
 
