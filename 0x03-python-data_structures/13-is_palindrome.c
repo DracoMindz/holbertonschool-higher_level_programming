@@ -9,7 +9,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-  int len, count, lencount;
+	int len, count, lencount;
 	listint_t *nodePointer, *endPointer;
 
 	if (head == NULL)
@@ -18,7 +18,7 @@ int is_palindrome(listint_t **head)
 	}
 	if (*head == NULL)
 	{
-	  return (1);
+		return (1);
 	}
 	endPointer = *head;
 
@@ -30,22 +30,22 @@ int is_palindrome(listint_t **head)
 	nodePointer = *head;
 	endPointer = *head;
 
-	while (count > (len/2))
+	while (count > (len / 2))
 	{
-	  endPointer = *head;
-	  lencount = 0;
-	  while (lencount < count)
-	    {
-	      endPointer = endPointer->next;
-	      lencount++;
-	    }
-	  if (nodePointer->n == endPointer->n)
-	    {
-	      nodePointer = nodePointer->next;
-	    }
-	  else
-	    return (0);
-	  count--;
+		endPointer = *head;
+		lencount = 0;
+		while (lencount < count)
+		{
+			endPointer = endPointer->next;
+			lencount++;
+		}
+		if (nodePointer->n == endPointer->n)
+		{
+			nodePointer = nodePointer->next;
+		}
+		else
+			return (0);
+		count--;
 	}
 	return (1);
 }
