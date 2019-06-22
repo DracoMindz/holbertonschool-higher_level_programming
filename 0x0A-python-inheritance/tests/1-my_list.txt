@@ -1,0 +1,18 @@
+"""
+Doctest Module: Testing the print_sorted function from 1-my_list.py
+Each '>>>' will run as if in python command line.
+After each '>>>' is a test; next line will be the expected output.
+If output does not match exactly (including trail spaces), it is a test fail.
+python3 -c 'print(__import__("print_square").__doc__)'
+"""
+>>> from 1-my_list.py import my_list
+>>>my_list.print_sorted(H)
+Traceback (most recent call last):
+NameError: name 'H' is not defined
+>>>my_list.print_sorted("run")
+Traceback (most recent call last):
+TypeError: print_sorted() takes 1 positional argument but 2 were given
+>>>my_list.print_sorted(2)
+Traceback (most recent call last):
+TypeError: print_sorted() takes 1 positional argument but 2 were given
+
