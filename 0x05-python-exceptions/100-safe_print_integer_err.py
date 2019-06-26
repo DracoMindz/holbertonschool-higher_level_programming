@@ -2,7 +2,8 @@
 def safe_print_integer_err(value):
 
     try:
-        print("{:d}".format(value))
+        valueConvertedToAnInt = int(value)
+        print(valueConvertedToAnInt)
         return True
     except Exception as error:
         print("Exception:", error)
