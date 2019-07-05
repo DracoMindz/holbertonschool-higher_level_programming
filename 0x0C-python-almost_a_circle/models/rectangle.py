@@ -21,15 +21,18 @@ class Rectangle(Base):
 
     rectanglesCalled += 1
 
-    @property   # method to get value/properties of private width
+    @property
     def width(self):
+        """
+        method to get value/properties of private width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
         """
-        Task 3: TypeError for non integer, ValueError for negative
-numbers
+        setting value for width
+        Task 3: TypeError for non integer, ValueError for negative numbers
         """
         if type(value) is not int:
             raise TypeError('width must be an integer')
@@ -37,16 +40,18 @@ numbers
             raise ValueError('width must be > 0')
         self.__width = value
 
-    @property  # method to get value/properties of private height
+    @property
     def height(self):
+        """
+        method to get value/properties of private height
+        """
         return self.__height
 
-    @height.setter   # setting value of height
+    @height.setter
     def height(self, value):
-
         """
-        Task 3 TypError for non integer, ValueError for negative nu
-mbers
+        setting value of height
+        Task 3 TypError for non integer, ValueError for negative numbers
         """
         if type(value) is not int:
             raise TypeError('height must be an integer')
@@ -54,15 +59,18 @@ mbers
             raise ValueError('height must be > 0')
         self.__height = value
 
-    @property   # method to get values/properties of private x
+    @property
     def x(self):
+        """
+        method to get values/properties of private
+        """
         return self.__x
 
-    @x.setter   # setting value of x
+    @x.setter
     def x(self, value):
         """
-        Task 3 TypeError for non integer, ValueError for negative n
-umbers
+        setting value of x
+        Task 3 TypeError for non integer, ValueError for negative numbers
         """
         if type(value) is not int:
             raise TypeError('x must be an integer')
@@ -70,14 +78,17 @@ umbers
             raise ValueError('x must be >= 0')
             self.__x = value
 
-    @property   # methos to get value/properties of private y
+    @property
     def y(self):
+        """
+        method to get value/properties of private y
+        """
         return self.__y
 
-    @y.setter   # setting value of y
+    @y.setter
     def y(self, value):
-
         """
+        setting value of y
         Task 3 TypeError for non integer. ValueError for negative numbers
         """
         if type(value) is not int:
@@ -86,43 +97,47 @@ umbers
             raise ValueError('y must be >= 0')
         self.__y = value
 
+    def area(self):
         """
         Task 4 public method area that reurns the area of the Rectangle
         """
-    def area(self):
         return self.width * self.height
 
+    def display(self):
         """
         Task 5 display the rectangle with "#"
         """
-    def display(self):
         for x in range(self.height):
             print("#" * self.width)
 
+    def __str__(self, __init__, id=None):
         """
         Task 6: return a string format. call the variables.
         """
-
-    def __str__(self, __init__, id=None):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def display(self):
         """
         Task 7: Print in stdout instance the Rectagle # character
         """
-    def display(self):
         print(self.y * '\n', end='')
         for x in range(self.height):
             print(self.x * " " + self.width * "#")
+
+    def update(self, *args, **kwargs):
         """
         Task 8: Assign arguments to each attribute
         """
-    def update(self, *args, **kwargs):
         k = [id, w, h, x, y]
         for k, v in (key, args):
             if v:
                 setattr(self, k. v)
 
     def to_dictionary(self):
+        """
+        list of rectangle values
+        """
         dictRectangle = {'x': self.x, 'y': self.y, 'id': self.id,
                          'height': self.height, 'width': self.width}
         return dictRectangle
