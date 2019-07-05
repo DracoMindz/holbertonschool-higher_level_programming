@@ -4,4 +4,4 @@
 
 class LockedClass:
     """ prevents snu instance unless called first_name"""
-    __slot__ ='first_name'
+    __slots__ = 'first_name'
