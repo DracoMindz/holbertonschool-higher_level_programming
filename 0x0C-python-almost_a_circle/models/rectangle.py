@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 from models.base import Base
-#  import _tkinterxs
 """
 Class rectangle that inherits from Base.
 """
@@ -26,11 +25,11 @@ class Rectangle(Base):
     def width(self):
         return self.__width
 
-    @width.setter  # setting value of width    
+    @width.setter
     def width(self, value):
-
         """
-        Task 3: TypeError for non integer, ValueError for negative numbers
+        Task 3: TypeError for non integer, ValueError for negative
+numbers
         """
         if type(value) is not int:
             raise TypeError('width must be an integer')
@@ -46,7 +45,8 @@ class Rectangle(Base):
     def height(self, value):
 
         """
-        Task 3 TypError for non integer, ValueError for negative numbers
+        Task 3 TypError for non integer, ValueError for negative nu
+mbers
         """
         if type(value) is not int:
             raise TypeError('height must be an integer')
@@ -61,7 +61,8 @@ class Rectangle(Base):
     @x.setter   # setting value of x
     def x(self, value):
         """
-        Task 3 TypeError for non integer, ValueError for negative numbers
+        Task 3 TypeError for non integer, ValueError for negative n
+umbers
         """
         if type(value) is not int:
             raise TypeError('x must be an integer')
@@ -103,27 +104,25 @@ class Rectangle(Base):
         """
 
     def __str__(self, __init__, id=None):
-
-        return "[Rectangle] ({}) {}/{} - {}/{}"\
-                .format(self.id, self.x, self.y, self.width, self.height)
-
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
         """
         Task 7: Print in stdout instance the Rectagle # character
         """
     def display(self):
-        print(self.y * '\n', end='')# move down 
+        print(self.y * '\n', end='')
         for x in range(self.height):
-            print(self.x * " " + self.width * "#")  ##  print "#" start at x
+            print(self.x * " " + self.width * "#")
         """
         Task 8: Assign arguments to each attribute
         """
     def update(self, *args, **kwargs):
-        k = [id, w, h, x, y)
+        k = [id, w, h, x, y]
         for k, v in (key, args):
             if v:
                 setattr(self, k. v)
 
     def to_dictionary(self):
-        dictRectangle = {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.hei\
-ght,'width':self.width}
-         return dictRectangle
+        dictRectangle = {'x': self.x, 'y': self.y, 'id': self.id,
+                         'height': self.height, 'width': self.width}
+        return dictRectangle
