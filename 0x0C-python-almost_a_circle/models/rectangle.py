@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
-from base import Base
+"""This module contains the rectangle class"""
+from models.base import Base
 """This module contains the rectangle class"""
 
 
@@ -21,9 +21,6 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """
-        method to get value/properties of private width
-        """
         return self.__width
 
     @width.setter
@@ -86,7 +83,6 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """
-        setting value of y
         Task 3 TypeError for non integer. ValueError for negative numbers
         """
         if type(value) is not int:
