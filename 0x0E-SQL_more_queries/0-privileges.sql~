@@ -1,0 +1,6 @@
+-- Write a script that lists all privileges of the MySQL users 
+-- uasing grant statement
+/*CREATE USER 'user_0d_1'@'hlocalhost' IDENTIFIED BY 'password';*/ 
+/*CREATE USER 'user_0d_2'@'hlocalhost' IDENTIFIED BY 'password';*/ 
+SHOW GRANTS FOR user_0d_1;
+SHOW GRANTS FOR user_0d_2;
