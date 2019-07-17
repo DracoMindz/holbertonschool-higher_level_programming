@@ -1,5 +1,3 @@
 -- Import the database dump from hbtn_0d_tvshows to your MySQL server                                            
--- Write a script that lists all shows contained in database that have at least one genre linked.              -- The database name will be passed as an argument of the mysql command  
-mysql -u root -p < hbtn_0d_tvshows.sql;
-SELECT tv_shows.title, tv_show_genres.genre_id, FROM hbtn_0d_tvshow WHERE qty tv_show_genres = 1 GROUP BY tv_sho\
-ws.title, tv_show_genres.genre_id ASC;
+-- Write a script that counts all shows contained in database that have at least one genre linked.              -- The database name will be passed as an argument of the mysql command  
+SELECT name AS genre, COUNT(*) AS number_of_shows FROM tv_genre GROUP BY genre FROM tv_show_genre JOIN tv_shows  ON genre_id =id GROUP BY genre ORDER BY number_of_shows DESC; 
