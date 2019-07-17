@@ -1,0 +1,2 @@
+-- script that creates the database hbtn_0d_usa and the table states
+-- if the database or the table already existy script should not fail
