@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import turtle
 
 class Base:
     """
@@ -43,7 +42,7 @@ class Base:
                     turtle.left(90)
                     turtle.forward(self.height)
                     turtle.left(90)
-                    
+
                 turtle.exitonclick()  # drawing exits when you click
             #  Task 16
             def save_to_file(cls, list_objs):
@@ -54,5 +53,3 @@ class Base:
             #  Task 18
             def create(cls, **dictionary):
                 pass
-            
-
