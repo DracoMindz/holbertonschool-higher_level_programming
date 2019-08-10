@@ -1,18 +1,24 @@
 #!/usr/bin/python3
-import turtle
-#base imports turtle
+<<<<<<< HEAD
+=======
+"""create Base Class"""
+
+>>>>>>> 4cd4b61a518fd7fb16d46f43950a3cbdb9c8bfdc
+
 class Base:
     """
     This class will be the base of all other classes
     """
     __nb_objects = 0
 
-    def __init__(self, id=None): #instantiates class
-        if id is not None: #public attribute or property
+    def __init__(self, id=None):
+        """intializes the base class"""
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+<<<<<<< HEAD
 
 
             def load_from_file(cls):
@@ -43,7 +49,7 @@ class Base:
                     turtle.left(90)
                     turtle.forward(self.height)
                     turtle.left(90)
-                    
+
                 turtle.exitonclick()  # drawing exits when you click
             #  Task 16
             def save_to_file(cls, list_objs):
@@ -54,5 +60,5 @@ class Base:
             #  Task 18
             def create(cls, **dictionary):
                 pass
-            
-
+=======
+>>>>>>> 4cd4b61a518fd7fb16d46f43950a3cbdb9c8bfdc
