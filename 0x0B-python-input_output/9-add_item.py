@@ -11,9 +11,9 @@ loadFile = __import__('8-load_from_json_file').load_from_json_file
 mylist = []
 
 if os.path.exists('add_item.json'):
-    myList = loadFile('add_item.json')
+    mylist = loadFile('add_item.json')
 
 for b in sys.argv[1:]:
-    myList.append(b)
+    mylist.append(b)
 
-saveFile(myList, 'add_item.json')
+saveFile(mylist, "add_item.json")
