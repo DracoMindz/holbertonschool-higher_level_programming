@@ -4,7 +4,7 @@ import sys
 from sys import argv
 
 conn = MySQLdb.connect(host="localhost", port=3306,
-                       user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+                       user=argv[1], passwd=argv[2], db=argv[3])
 cur = conn.cursor()
 cur.execute("SELECT * FROM states ORDER BY id ASC")
 # HERE I have to know SQL to grab all states in my database
