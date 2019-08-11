@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import MySQLdb
-from sys import argv
+import sys
 
 conn = MySQLdb.connect(host="localhost", port=3306,
                        user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
