@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import sys import argv
+from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
@@ -13,7 +13,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for entry in session.query(State).filter(State.name.like('%a%')).order_by(State.id):
+    for entry in session.query(State).filter(
+            State.name.like('%a%')).order_by(State.id):
         print("{}: {}".format(entry.id, entry.name))
-
-    session.close()
