@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#use filter to find condition then print
+# use filter to find condition then print
 
 
 from sys import argv
