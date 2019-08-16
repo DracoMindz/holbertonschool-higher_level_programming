@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+#use filter to find condition then print
+
 
 from sys import argv
 from sqlalchemy import create_engine
@@ -14,11 +16,11 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    entryfirst = session.query(State).filter_by(name=argv[4]).first()
+    entry = session.query(State).filter_by(name=argv[4]).first()
 
-    if entryfirst is not None:
-        print(states.id)
+    if entry is not None:
+        print(state.id)
     else:
-        print('Not found\n')
+        print('Not found')
 
     session.close()
