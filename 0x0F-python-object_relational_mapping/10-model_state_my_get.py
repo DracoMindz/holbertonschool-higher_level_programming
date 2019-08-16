@@ -16,10 +16,10 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    entry = session.query(State).filter_by(name=argv[4]).first()
+    states = session.query(State).filter_by(name=argv[4]).first()
 
     if entry is not None:
-        print(state.id)
+        print(states.id)
     else:
         print('Not found')
 
