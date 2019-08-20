@@ -1,3 +1,3 @@
 #!/bin/bash
 # Takes in URL, send URL, display size of body in response
-curl  -sI $URL |wc -c
+curl -Is "$1" |wc -c
