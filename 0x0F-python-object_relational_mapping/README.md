@@ -71,4 +71,8 @@ Write a script that deletes all State objects with a name containing the letter 
 
 **14. Cities in state mandatory**
 Write a Python file similar to model_state.py named model_city.py that contains the class definition of a City.
+<<<<<<< HEAD
+g
+=======
 
+>>>>>>> b4391b678f4fd7d9ae71659e02fc84358cea0208
