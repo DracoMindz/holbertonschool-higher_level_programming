@@ -1,3 +1,3 @@
 #!/bin/bash
 # curl body size
-curl -s -f -L $1 
+curl -s "$1" | wc -c
