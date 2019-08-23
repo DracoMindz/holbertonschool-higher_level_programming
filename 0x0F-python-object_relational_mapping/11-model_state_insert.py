@@ -21,4 +21,5 @@ if __name__ == "__main__":
     entryfirst = session.query(State).filter(name == 'Louisiana').first()
     print(entryfirst.id)
     session.commit
+#end
     
