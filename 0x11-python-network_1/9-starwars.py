@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Script takes url, send req to url, diplay body response """
+""" Python script takes string, sends search request to Star Wars API """
 import requests
 import sys
 
