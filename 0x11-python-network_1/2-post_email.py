@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# script takes in two arguements
 import urllib.request
 import urllib.parse
 import sys
@@ -11,4 +12,4 @@ if __name__ == "__main__":
     data_e = data.encode('ascii')
     request = urllib.request.Request(url, data_e)
     with urllib.request.urlopen(request) as response:
-        print(response.decode())
+        print(response.decode().decode('utf-8'))
