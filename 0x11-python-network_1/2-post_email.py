@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# script takes in two arguements
+"""
+takes two areguements, first is url second is email
+"""
 import urllib.request
 import urllib.parse
 import sys
