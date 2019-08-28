@@ -12,6 +12,6 @@ if __name__ == '__main__':
         for bob in r.json()['results']:
             print(bob['name'])
         try:
-        r_next = requests.get(r.json()['next'])
+            r_next = requests.get(r.json()['next'])
         except:
             break
