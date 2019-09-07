@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# changes state object id = 2 to New Mexico
+# changes state object with id = 2 to New Mexico
 # script connects via sqlachemy to mysql db local host port 3306
 
 
