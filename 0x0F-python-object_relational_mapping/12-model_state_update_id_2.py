@@ -5,7 +5,7 @@
 
 import sys
 from model_state import Base, State
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, update
 from sqlalchemy.orm import sessionmaker
 
 
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    session.query(State)
-    .filter(State.id == 2).update({State.name: "New Mexico"})
+    session.query(State)\
+        .filter(State.id == 2).update({State.name: "New Mexico"})
 
     session.commit()
