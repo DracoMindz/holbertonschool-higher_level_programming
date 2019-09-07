@@ -15,11 +15,8 @@ if __name__ == "__main__":
     # the function takes in three arguments
 
     Base.metadata.create_all(engine)
-
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    entry = State(name='Louisiana')
 
     session.query(State).filter(State.id == 2)
     .update({State.name: "New Mexico"})
