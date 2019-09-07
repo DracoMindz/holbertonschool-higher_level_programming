@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # create variable for query search
     # filter out the states that contain and 'a'
     states_with_a = session.query(State).filter(State.name.contains('a')
-    # if a state meets the definition of state_with_a delete it
+    # state meets the definition of state_with_a delete it
     for state in states_with_a:
         session.delete(state)
 
