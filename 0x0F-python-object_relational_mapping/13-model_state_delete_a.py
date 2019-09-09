@@ -22,6 +22,8 @@ if __name__ == "__main__":
     # create variable for query search
     # filter out the states that contain and 'a'
     session.query(State).filter(State.name.contains('%a%').all()) \
-        .delete(synchronize_session=False)
+        .delete(state)
 
+    session.flush
     session.commit
+    session.close
