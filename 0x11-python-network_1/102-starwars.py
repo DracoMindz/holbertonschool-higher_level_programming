@@ -12,8 +12,10 @@ if __name__ == '__main__':
     while r is not None:
         for bob in r.json()['results']:
             print(bob['name'])
-            for film in r.json()['films']:
-                print("\t{}".format(film['title']))
+            film_url = bob.get('films')
+            for film in film_url:
+                film_req = r.json()[film]
+                print("\t{}".format(film_req['title']))
         try:
             r = requests.get(r.json()['next'])
         except:
