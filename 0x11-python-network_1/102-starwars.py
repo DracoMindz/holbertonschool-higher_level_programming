@@ -14,8 +14,8 @@ if __name__ == '__main__':
             print(bob['name'])
             film_url = bob.get('films')
             for film in film_url:
-                film_req = r.json()[film]
-                print("\t{}".format(film_req['title']))
+                film_req = requests.get(film).json()
+                print("\t{}".format(film_req('title')))
         try:
             r = requests.get(r.json()['next'])
         except:
