@@ -22,9 +22,8 @@ What are the arithmetic operators and how to use them?
 How to manipulate dictionary?
 How to import a file?
 
-## Requirements
 
-##Tasks
+## Tasks
 
 **0. First constant, first print mandatory**
 Write a script that prints “Javascript is amazing”.
