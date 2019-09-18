@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// convert arguemtn to integer
+// convert arguement to integer
 
 const parsed = parseInt(process.argv[2]);
 
