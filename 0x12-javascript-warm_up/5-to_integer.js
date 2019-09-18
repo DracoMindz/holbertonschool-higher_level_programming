@@ -2,10 +2,10 @@
 
 // convert arguement to integer
 
-const parsed = parseInt(process.argv[2]);
+const p = parseInt(process.argv[2]);
 
-if (isNaN(parsed)) {
+if (isNaN(p)) {
   console.log('Not a number');
 } else {
-  console.log('My Number: ' + parsed);
+  console.log('My Number: ' + p);
 }
