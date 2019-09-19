@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-exports.callMeMaybe = function (number, theFunction) {
+exports.addMeMaybe = function (number, theFunction) {
   return theFunction(number++);
 };
