@@ -13,10 +13,5 @@ class Rectangle {
             console.log('X'.repeat(this.width));
         }
     }
-
-    double() {
-        this.width *= 2;
-        this.height *= 2;
-    }
 }
 module.exports = Rectangle;
