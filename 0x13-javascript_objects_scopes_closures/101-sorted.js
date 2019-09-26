@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const dict = require('./101-data').dict;
+const dict = require('./101-data.js').dict;
 const uDict = {};
 
 for (const m in dict) {
