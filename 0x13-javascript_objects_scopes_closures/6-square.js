@@ -1,13 +1,13 @@
 #!/usr/bin/node
 const mSquare = require('./5-square');
-class Square extends mSquare {
+module.exports = class Square extends mSquare {
   charPrint (c) {
     if (c === undefined) {
-      c = 'X';
+      super.print();
+    } else {
+      for (let m = 0; m < this.height; m++) {
+        console.log(c.repeat(this.width));
+      }
     }
-    for (let m = 0; m < this.height; m++) {
-			 console.log(c.repeat(this.width));
-    }
-	 }
-}
-module.exports = Square;
+  }
+};
