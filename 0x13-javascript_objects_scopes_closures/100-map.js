@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-const dict = require('./100-data.js').dict;
+const list = require('./100-data.js').list;
 
-const mpDict = dict.map(function (current, index) { return (current * index); });
-console.log(dict);
+const mpDict = list.map(function (current, index) { return (current * index); });
+console.log(list);
 console.log(mpDict);
