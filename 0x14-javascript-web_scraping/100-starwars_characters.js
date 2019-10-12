@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-const movieUrl = 'https://swapi.co/api/films' + process.argv[2];
+let movieUrl = 'https://swapi.co/api/films' + process.argv[2];
 
 request.get(movieUrl, (error, response, body) => {
   if (error) {
