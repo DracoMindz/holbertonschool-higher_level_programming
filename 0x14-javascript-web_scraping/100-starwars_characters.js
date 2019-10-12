@@ -2,7 +2,7 @@
 const request = require('request');
 const movieUrl = 'https://swapi.co/api/films' + process.argv[2];
 
-request(movieUrl, (error, response, body) => {
+request.get(movieUrl, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
