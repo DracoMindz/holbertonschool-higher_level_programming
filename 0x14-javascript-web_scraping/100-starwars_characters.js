@@ -6,7 +6,7 @@ request.get(movurl, (err, response, body) => {
   else {
     const char = JSON.parse(body);
     for (const index of char.characters) {
-      request(i, function (err, response, body){
+      request(index, function (err, response, body) {
         if (err) throw err;
         else {
           console.log(JSON.parse(body).name);
